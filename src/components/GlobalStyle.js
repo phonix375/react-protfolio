@@ -10,7 +10,8 @@ const GlobalStyle = createGlobalStyle`
     }
     button{
         font-weight: bold;
-        font-size: 1.1rem;cursor: pointer;
+        font-size: 1.1rem;
+        cursor: pointer;
         padding: 1rem 2rem;
         border: 3px solid #23d997;
         background: transparent;
@@ -20,7 +21,31 @@ const GlobalStyle = createGlobalStyle`
             background-color: #23d997;
             color: white;
         }
+
     }
+    h2{
+            font-weight: lighter;
+            font-size: 4rem;
+        }
+    h3{
+            color: white;
+        }
+    h4{
+        font-weight: bold;
+        }
+    span{
+        font-weight: bold;
+        color: #23d997;
+    }
+    a{
+        font-size: 1.1rem;
+    }
+    p{
+            padding: 3rem 0rem;
+            color: #ccc;
+            line-height: 150%;
+        }
+
 `
 
 export default GlobalStyle ;
