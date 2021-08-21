@@ -17,15 +17,17 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Route path="/">
-        <AboutUs />
-      </Route>
-      <Route path="/work">
-        <OurWork />
-      </Route>
-      <Route path="/contact">
-        <ContactUs />
-      </Route>
+      <Switch>
+        <Route path="/" exact>
+          <AboutUs />
+        </Route>
+        <Route path="/work">
+          <OurWork />
+        </Route>
+        <Route path="/contact">
+          <ContactUs />
+        </Route>
+      </Switch>
       
       
     </div>
