@@ -8,13 +8,13 @@ const Nav = () => {
             <h1><Link to="/" id="logo">Alexy Kotliar</Link></h1>
             <ul>
                 <li>
-                    <Link to="/">1. About</Link>
+                    <Link to="/">About</Link>
                 </li>
                 <li>
-                    <Link to="/work">2. My Word</Link>
+                    <Link to="/work">My Work</Link>
                 </li>
                 <li>
-                    <Link to="/contact">3. Contact</Link>
+                    <Link to="/contact">Contact</Link>
                 </li>
             </ul>
         </StyledNav>

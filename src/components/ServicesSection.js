@@ -6,6 +6,16 @@ import money from '../img/money.svg'
 import teamwork from '../img/teamwork.svg'
 import home2 from '../img/home2.png'
 
+import Home1 from '../img/home1.jpg'
+
+
+import javascript from '../img/javascript.svg'
+import python from '../img/python.svg'
+import react from '../img/react.svg'
+import mongodb from '../img/mongodb.svg'
+import nodejs from '../img/nodejs.svg'
+
+
 import { About, Description, Image, Hide} from '../styles'; 
 import styled from 'styled-components';
 
@@ -14,26 +24,26 @@ const ServiceSection = () => {
     return(
         <Sevices>
             <Description>
-                <h2>High <span>quality</span> services</h2>
+                <h2>Top <span>Skills</span></h2>
                 <Cards>
                     <Card>
                         <div className="icon">
-                            <img src={clock} alt="icon" />
-                            <h3>Efficient</h3>
+                            <img src={python} alt="icon" />
+                            <h3>Python</h3>
                         </div>
-                       <p>Lorem ipsum dolor sit amet.</p>
+                       <p>Building backend with frameworks like Flask and Django</p>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={diaphragm} alt="icon" />
-                            <h3>Diaphragm</h3>
+                            <img src={react} alt="icon" />
+                            <h3>React</h3>
                         </div>
-                       <p>Lorem ipsum dolor sit amet.</p>
+                       <p>Using React to build styled and fast web apps</p>
                     </Card>
                     <Card>
                         <div className="icon">
-                            <img src={money} alt="icon" />
-                            <h3>Money</h3>
+                            <img src={javascript} alt="icon" />
+                            <h3>Javascrip</h3>
                         </div>
                        <p>Lorem ipsum dolor sit amet.</p>
                     </Card>
@@ -44,10 +54,24 @@ const ServiceSection = () => {
                         </div>
                        <p>Lorem ipsum dolor sit amet.</p>
                     </Card>
+                    <Card>
+                        <div className="icon">
+                            <img src={nodejs} alt="" />
+                            <h3>NodeJS</h3>
+                        </div>
+                       <p>Lorem ipsum dolor sit amet.</p>
+                    </Card>
+                    <Card>
+                        <div className="icon">
+                            <img src={mongodb} alt="" />
+                            <h3>MongoDB</h3>
+                        </div>
+                       <p>using noSQL DB</p>
+                    </Card>
                 </Cards>
             </Description>
             <Image>
-                <img src={home2} alt="" />
+                <img src={Home1} alt="" />
             </Image>
         </Sevices>
     )
@@ -79,6 +103,9 @@ const Card = styled.div`
             color: black;
             padding:1rem
         }
+    }
+    img{
+        height: 50px;
     }
 `
 

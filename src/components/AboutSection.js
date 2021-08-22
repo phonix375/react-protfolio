@@ -1,6 +1,5 @@
 import React from 'react';
-import home1 from '../img/home1.png'
-import styled from 'styled-components'
+import me from '../img/Me.png'
 import { About, Description, Image, Hide} from '../styles'; 
 
 const AboutSection = () => {
@@ -9,20 +8,20 @@ const AboutSection = () => {
     <Description>
         <div className="title">
             <Hide>
-                <h2>We work to make</h2>
+                <h2>Hi,</h2>
             </Hide>
             <Hide>
-                <h2>your <span>dreams</span> come</h2>
+                <h2>My name is <span>Alexy Kotliar</span></h2>
             </Hide>
             <Hide>
-                <h2>true</h2>
+                <h2>a I'm Full stuck web developer</h2>
             </Hide>
         </div>
         <p>Contact me about any website idea that you have.</p>
-        <button>Contact Us</button>
+        <button>Contact</button>
     </Description>
     <Image>
-        <img src={home1} alt="My item" />
+        <img src={me} alt="My item" />
     </Image>
     </About>
     )

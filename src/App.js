@@ -12,6 +12,9 @@ import React from 'react';
   import Nav from './components/Nav'
 //import pages
 import AboutUs from './pages/AboutUs'
+import ProjectDetail from './pages/ProjectDetail';
+
+
 function App() {
   return (
     <div className="App">
@@ -21,8 +24,12 @@ function App() {
         <Route path="/" exact>
           <AboutUs />
         </Route>
-        <Route path="/work">
+        <Route path="/work/:id">
+            <ProjectDetail />
+            </Route>
+        <Route path="/work" exact>
           <OurWork />
+
         </Route>
         <Route path="/contact">
           <ContactUs />
