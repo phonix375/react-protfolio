@@ -15,7 +15,7 @@ import game from '../img/game.jpeg'
 import proTrader from '../img/Protrader.png'
 const OurWork = () => {
     return(
-        <Work exit="exit" variants={pageAnimation} initial="hidden" animate="show">
+        <Work style={{ background:"#fff"}} exit="exit" variants={pageAnimation} initial="hidden" animate="show">
             <Movie>
                 <h2>Guesss the opinion game</h2>
                 <div className='line'></div>
