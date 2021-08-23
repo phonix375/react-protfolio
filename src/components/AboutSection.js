@@ -4,6 +4,8 @@ import { About, Description, Image, Hide} from '../styles';
 //Framer motion
 import {motion} from "framer-motion"
 import {titleAnimation, fade, photoAnimation} from '../animation'
+import Wave from './Wave';
+import styled from 'styled-components';
 
 
 const AboutSection = () => {
@@ -26,12 +28,12 @@ const AboutSection = () => {
         <motion.button variants={fade}>Contact me!</motion.button>
     </Description>
     <Image>
-        <motion.img src={me} alt="My item"  variants={photoAnimation} />
+        <motion.img src={me} alt="My item" variants={photoAnimation}/>
     </Image>
+    <Wave />
     </About>
     )
 };
 
-//styled components
 
 export default AboutSection
