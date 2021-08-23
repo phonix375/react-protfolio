@@ -7,20 +7,26 @@ import React from 'react';
   import OurWork from './pages/OurWork';
 
   //router
-  import {Switch, Route} from 'react-router-dom'
+  import {Switch, Route, useLocation} from 'react-router-dom'
 
   import Nav from './components/Nav'
 //import pages
 import AboutUs from './pages/AboutUs'
 import ProjectDetail from './pages/ProjectDetail';
 
+//animation
+import { AnimatePresence } from 'framer-motion';
+
 
 function App() {
+  const location = useLocation();
+  console.log(location)
   return (
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <Switch>
+      <AnimatePresence>
+      <Switch >
         <Route path="/" exact>
           <AboutUs />
         </Route>
@@ -29,14 +35,12 @@ function App() {
             </Route>
         <Route path="/work" exact>
           <OurWork />
-
         </Route>
         <Route path="/contact">
           <ContactUs />
         </Route>
       </Switch>
-      
-      
+      </AnimatePresence>
     </div>
   );
 }

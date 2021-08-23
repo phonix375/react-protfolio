@@ -1,24 +1,26 @@
 import React from 'react';
 import me from '../img/Me.png'
 import { About, Description, Image, Hide} from '../styles'; 
-
+//Framer motion
+import {motion} from "framer-motion"
 const AboutSection = () => {
+
     return(
 <About>
     <Description>
-        <div className="title">
+        <motion.div className="title">
             <Hide>
-                <h2>Hi,</h2>
+                <motion.h2>Hi,</motion.h2>
             </Hide>
             <Hide>
-                <h2>My name is <span>Alexy Kotliar</span></h2>
+                <motion.h2 >I'm <span>Alex</span></motion.h2>
             </Hide>
             <Hide>
-                <h2>a I'm Full stuck web developer</h2>
+                <motion.h2>full stack web developer</motion.h2>
             </Hide>
-        </div>
+        </motion.div>
         <p>Contact me about any website idea that you have.</p>
-        <button>Contact</button>
+        <button>Contact me!</button>
     </Description>
     <Image>
         <img src={me} alt="My item" />
