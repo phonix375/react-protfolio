@@ -13,7 +13,14 @@ import {pageAnimation, fade, photoAnimation, lineAnimation, slider, sliderContai
 //my images
 import game from '../img/game.jpeg'
 import proTrader from '../img/Protrader.png'
+
+//import animation 
+import { useScroll } from '../components/useScroll';
+
 const OurWork = () => {
+    const [element, controls] = useScroll();
+    const [element2, controls2] = useScroll();
+    const [element3, controls3] = useScroll();
     return(
         <Work style={{ background:"#fff"}} exit="exit" variants={pageAnimation} initial="hidden" animate="show">
             <motion.div variants={sliderContainer}>
@@ -22,7 +29,7 @@ const OurWork = () => {
                 <Frame3 variants={slider}></Frame3>
                 <Frame4 variants={slider}></Frame4>
             </motion.div>
-            <Movie>
+            <Movie  ref={element} variants={fade} animate={controls} initial="hidden">
                 <motion.h2 variants={fade}>Guesss the opinion game</motion.h2>
                 <motion.div variants={lineAnimation} className='line'></motion.div>
                 <Link to="/work/Guess-the-Opinion">
@@ -31,18 +38,18 @@ const OurWork = () => {
                     </Hide>
                 </Link>
             </Movie>
-            <Movie>
+            <Movie ref={element2} variants={fade} animate={controls2} initial="hidden">
                 <motion.h2>Pro Trader</motion.h2>
-                <motion.div className='line'></motion.div>
+                <motion.div variants={lineAnimation} className='line'></motion.div>
                 <Link to='/work/Pro-Trader'>
                 <Hide>
                     <motion.img variants={photoAnimation} src={proTrader} alt="athlete" />
                 </Hide>
                 </Link>
             </Movie>
-            <Movie>
+            <Movie ref={element3} variants={fade} animate={controls3} initial="hidden">
                 <motion.h2>The Racer</motion.h2>
-                <motion.div className='line'></motion.div>
+                <motion.div variants={lineAnimation} className='line'></motion.div>
                 <Link>
                 <Hide>
                 <motion.img variants={photoAnimation} src={theracer} alt="athlete" />
@@ -61,7 +68,7 @@ const Work = styled(motion.div)`
         padding: 1rem 0rem;
     }
 `
-const Movie = styled.div`
+const Movie = styled(motion.div)`
     padding-bottom: 10rem;
     .line{
         height: 0.5rem;

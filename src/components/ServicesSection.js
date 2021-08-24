@@ -16,25 +16,18 @@ import mongodb from '../img/mongodb.svg';
 import nodejs from '../img/nodejs.svg';
 
 
-//test
-import { useInView } from 'react-intersection-observer';
-import { useAnimation } from 'framer-motion';
-import {fade} from '../animation';
+//scroll animation
+import {fade, scrollReveal} from '../animation';
+import { useScroll } from './useScroll';
 
 import { About, Description, Image, Hide} from '../styles'; 
 import styled from 'styled-components';
 
 
 const ServiceSection = () => {
-    const [element, view] = useInView({threshold: 0.5});
-    const controls = useAnimation();
-    if(view){
-        controls.start("show");
-    }else{
-        controls.start("hidden");
-    }
+    const [element, controls] = useScroll();
     return(
-        <Sevices variants={fade}  animate={controls} initial="hidden" ref={element}>
+        <Sevices variants={scrollReveal}  animate={controls} initial="hidden" ref={element}>
             <Description>
                 <h2>Top <span>Skills</span></h2>
                 <Cards>
