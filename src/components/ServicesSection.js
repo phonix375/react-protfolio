@@ -1,28 +1,40 @@
 import React from 'react';
 //import icons
 import clock from '../img/clock.svg';
-import diaphragm from '../img/diaphragm.svg'
-import money from '../img/money.svg'
-import teamwork from '../img/teamwork.svg'
-import home2 from '../img/home2.png'
+import diaphragm from '../img/diaphragm.svg';
+import money from '../img/money.svg';
+import teamwork from '../img/teamwork.svg';
+import home2 from '../img/home2.png';
 
-import Home1 from '../img/home1.jpg'
+import Home1 from '../img/home1.jpg';
 
 
-import javascript from '../img/javascript.svg'
-import python from '../img/python.svg'
-import react from '../img/react.svg'
-import mongodb from '../img/mongodb.svg'
-import nodejs from '../img/nodejs.svg'
+import javascript from '../img/javascript.svg';
+import python from '../img/python.svg';
+import react from '../img/react.svg';
+import mongodb from '../img/mongodb.svg';
+import nodejs from '../img/nodejs.svg';
 
+
+//test
+import { useInView } from 'react-intersection-observer';
+import { useAnimation } from 'framer-motion';
+import {fade} from '../animation';
 
 import { About, Description, Image, Hide} from '../styles'; 
 import styled from 'styled-components';
 
 
 const ServiceSection = () => {
+    const [element, view] = useInView({threshold: 0.5});
+    const controls = useAnimation();
+    if(view){
+        controls.start("show");
+    }else{
+        controls.start("hidden");
+    }
     return(
-        <Sevices>
+        <Sevices variants={fade}  animate={controls} initial="hidden" ref={element}>
             <Description>
                 <h2>Top <span>Skills</span></h2>
                 <Cards>
