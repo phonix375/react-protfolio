@@ -29,7 +29,7 @@ const OurWork = () => {
                 <Frame3 variants={slider}></Frame3>
                 <Frame4 variants={slider}></Frame4>
             </motion.div>
-            <Movie  ref={element} variants={fade} animate={controls} initial="hidden">
+            <Movie variants={fade} transition={{delay: 0.5}}>
                 <motion.h2 variants={fade}>Guesss the opinion game</motion.h2>
                 <motion.div variants={lineAnimation} className='line'></motion.div>
                 <Link to="/work/Guess-the-Opinion">
@@ -107,4 +107,5 @@ const Frame3 = styled(Frame1)`
 const Frame4 = styled(Frame1)`
     background: #8effa0;
 `
+
 export default OurWork;
