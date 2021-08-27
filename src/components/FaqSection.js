@@ -41,8 +41,6 @@ const FaqSection = () => {
                 </div>
             </Toggle>
             </AnimateSharedLayout>
-
-
         </Faq>
     )
 }
@@ -73,5 +71,7 @@ p{
     padding: 1rem 0rem;
 }
 `;
+
+
 export default FaqSection;
 

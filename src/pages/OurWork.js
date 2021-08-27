@@ -8,7 +8,7 @@ import theracer from '../img/theracer-small.png';
 // import animations
 import {motion} from 'framer-motion';
 import {pageAnimation, fade, photoAnimation, lineAnimation, slider, sliderContainer} from '../animation';
-
+import {ScrollTop} from '../components/ScrollTop';
 
 //my images
 import game from '../img/game.jpeg'
@@ -56,6 +56,7 @@ const OurWork = () => {
                 </Hide>
                 </Link>
             </Movie>
+            <ScrollTop />
         </Work>
     )
 };
@@ -66,6 +67,9 @@ const Work = styled(motion.div)`
     padding: 5rem 10rem;
     h2{
         padding: 1rem 0rem;
+    }
+    @media (max-width: 1300px){
+        padding: 2rem 2rem;
     }
 `
 const Movie = styled(motion.div)`
