@@ -38,6 +38,9 @@ function App() {
         <Route path="/contact">
           <ContactUs />
         </Route>
+        <Route path="/">
+          <AboutUs />
+        </Route>
       </Switch>
       </AnimatePresence>
     </div>

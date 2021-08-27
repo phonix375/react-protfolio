@@ -1,5 +1,6 @@
 import React from 'react';
 import me from '../img/Me.png'
+import me3 from '../img/me3.png'
 import { About, Description, Image, Hide} from '../styles'; 
 //Framer motion
 import {motion} from "framer-motion"
@@ -28,7 +29,7 @@ const AboutSection = () => {
         <motion.button variants={fade}>Contact me!</motion.button>
     </Description>
     <Image>
-        <motion.img src={me} alt="My item" variants={photoAnimation}/>
+        <motion.img src={me3} alt="My item" variants={photoAnimation}/>
     </Image>
     <Wave />
     </About>
